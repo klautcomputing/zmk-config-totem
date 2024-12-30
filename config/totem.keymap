@@ -40,7 +40,7 @@
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 0>;
+            bindings = <&kp ESCAPE>;
         };
 
         combo_enter {
@@ -71,10 +71,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp B       &kp W       &kp D        &kp L        &kp SEMICOLON    &kp SQT     &kp F        &kp O        &kp U       &kp J
-            &mt LGUI C  &mt LALT S  &mt LCTRL T  &mt LSHFT R  &kp X            &kp Q       &mt RSHFT N  &mt RCTRL A  &mt RALT I  &mt RGUI H
-&kp ESCAPE  &kp V       &kp Y       &kp G        &kp M        &kp Z            &kp K       &kp P        &kp COMMA    &kp DOT     &kp QUESTION  &kp BSLH
-                                    &kp DEL      &kp E        &kp SPACE        &kp DELETE  &kp SPACE    &kp BSPC
+       &kp B       &kp W       &kp D        &kp L        &kp SEMICOLON    &kp SQT     &kp F        &kp O        &kp U       &kp J
+       &mt LGUI C  &mt LALT S  &mt LCTRL T  &mt LSHFT R  &kp X            &kp Q       &mt RSHFT N  &mt RCTRL A  &mt RALT I  &mt RGUI H
+&to 1  &kp V       &kp Y       &kp G        &kp M        &kp Z            &kp K       &kp P        &kp COMMA    &kp DOT     &kp QUESTION  &kp BSLH
+                               &kp DEL      &kp E        &kp SPACE        &kp DELETE  &kp SPACE    &kp BSPC
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+       &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans
+       &trans  &trans  &trans  &kp D   &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH      &trans
+&to 0  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LS(PIPE)   &trans  &trans
+                       &trans  &trans  &trans    &trans  &trans                &trans
             >;
         };
 
